@@ -275,3 +275,4 @@ dan/media/
 .env
 .envs/*
 !.envs/.local/
+.environ
