@@ -1,0 +1,39 @@
+{
+  "app.css": "http://localhost:9091/css/app.css",
+  "app.js": "http://localhost:9091/js/app.js",
+  "entrypoints": {
+    "app": {
+      "assets": {
+        "js": [
+          "http://localhost:9091/js/runtime.js",
+          "http://localhost:9091/js/vendors-node_modules_alpinejs_dist_module_esm_js-node_modules_htmx_org_dist_htmx_js-node_modu-8e5da0.js",
+          "http://localhost:9091/js/app.js"
+        ],
+        "css": [
+          "http://localhost:9091/css/app.css"
+        ]
+      }
+    }
+  },
+  "js/vendors-node_modules_alpinejs_dist_module_esm_js-node_modules_htmx_org_dist_htmx_js-node_modu-8e5da0.js": "http://localhost:9091/js/vendors-node_modules_alpinejs_dist_module_esm_js-node_modules_htmx_org_dist_htmx_js-node_modu-8e5da0.js",
+  "runtime.js": "http://localhost:9091/js/runtime.js",
+  "vendors/.gitkeep": "http://localhost:9091/vendors/.gitkeep",
+  "vendors/images/.gitkeep": "http://localhost:9091/vendors/images/.gitkeep",
+  "vendors/images/analysis.png": "http://localhost:9091/vendors/images/analysis.png",
+  "vendors/images/colored-doodle.svg": "http://localhost:9091/vendors/images/colored-doodle.svg",
+  "vendors/images/doodle.svg": "http://localhost:9091/vendors/images/doodle.svg",
+  "vendors/images/hero.png": "http://localhost:9091/vendors/images/hero.png",
+  "vendors/images/investment-dummies.jpg": "http://localhost:9091/vendors/images/investment-dummies.jpg",
+  "vendors/images/logo.png": "http://localhost:9091/vendors/images/logo.png",
+  "vendors/images/map.svg": "http://localhost:9091/vendors/images/map.svg",
+  "vendors/images/masrafcapitalllc_net.zip": "http://localhost:9091/vendors/images/masrafcapitalllc_net.zip",
+  "vendors/images/masrafcapitalllc_net/masrafcapitalllc_net.ca-bundle": "http://localhost:9091/vendors/images/masrafcapitalllc_net/masrafcapitalllc_net.ca-bundle",
+  "vendors/images/masrafcapitalllc_net/masrafcapitalllc_net.crt": "http://localhost:9091/vendors/images/masrafcapitalllc_net/masrafcapitalllc_net.crt",
+  "vendors/images/masrafcapitalllc_net/masrafcapitalllc_net.p7b": "http://localhost:9091/vendors/images/masrafcapitalllc_net/masrafcapitalllc_net.p7b",
+  "vendors/images/sample.jpg": "http://localhost:9091/vendors/images/sample.jpg",
+  "vendors/images/wave-1.png": "http://localhost:9091/vendors/images/wave-1.png",
+  "vendors/images/wave-2.png": "http://localhost:9091/vendors/images/wave-2.png",
+  "vendors/images/wave-3.png": "http://localhost:9091/vendors/images/wave-3.png",
+  "vendors/images/wave-4.png": "http://localhost:9091/vendors/images/wave-4.png",
+  "vendors/images/webpack.png": "http://localhost:9091/vendors/images/webpack.png"
+}

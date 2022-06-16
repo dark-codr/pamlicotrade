@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block sidenav %}
+{% endblock sidenav %}
+
+{% block content %}
+<section class="w-full px-3 md:px-14 py-6">
+  <div class="rounded-md md:justify-between bg-dark text-white text-sm w-full md:flex md:items-center p-5">
+    <span class="block">Trading involves substantial risk and may result in the loss of your invested/greater that your invested capital, respectively.</span>
+    <h1 class="text-2xl font-black">FAQ</h1>
+  </div>
+</section>
+
+
+<!-- breif about the investments -->
+<section class="w-screen px-3 md:px-14 md:flex md:items-center md:space-y-0 md:justify-between space-y-8 py-14 gap-4">
+  <div class="md:w-2/3 w-full space-y-6">
+    <h2 class="text-4xl md:text-5xl font-black text-variant-2">Frequently Asked Questions</h2>
+    <p class="text-xl text-dark font-semibold text-justify">
+      We have a collection of frequently asked questions from majority of our investors. So please feel free to browse through these collections before sending us a direct mail.
+    </p>
+  </div>
+</section>
+
+<section class="w-screen py-12 px-14 md:px-64 text-left space-y-4">
+  {% for faq in faqs %}
+  <div class="w-full bg-light">
+    <div class="w-full bg-variant-2 text-white font-bold text-2xl p-4 rounded-t-md">
+      {{faq.question|title}}?
+    </div>
+    <div class="w-full font-semibold text-xl p-4">
+      <p class="text-dark space-y-3">
+        {{faq.answer|title}}
+      </p>
+    </div>
+  </div>
+  {% empty %}
+  <div class="w-full bg-light">
+    <div class="w-full bg-variant-2 text-white font-bold text-2xl p-4 rounded-t-md">
+     There is no FAQ?
+    </div>
+    <div class="w-full font-semibold text-xl p-4">
+      <p class="text-dark space-y-3">
+        The website administrator will update these periodically as questions gets labelled as frequent.
+      </p>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+{% endblock content %}

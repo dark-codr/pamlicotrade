@@ -1,0 +1,13 @@
+DJANGO_SETTINGS_MODULE=config.settings.local
+
+CURRENCY_EXCHANGE='d2ee03b153msh7f9f91df901fa08p163f4ajsn694bb6dda556'
+CURRENCY_EXCHANGE_URL="https://currency-converter5.p.rapidapi.com/currency/convert"
+
+
+DJANGO_AWS_ACCESS_KEY_ID=AKIAVD5PGXPHHDDDAC4B
+DJANGO_AWS_SECRET_ACCESS_KEY=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
+DJANGO_AWS_STORAGE_BUCKET_NAME=dan
+
+
+TINYMCE_KEY="shum1rw6f0vyum7x5yoq6onkn8nzjh0qlolq5q3v7zkcfo52"
+

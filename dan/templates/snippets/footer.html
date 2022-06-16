@@ -1,0 +1,106 @@
+{% load static %}
+<footer class="w-full px-3 md:px-14 py-14 bg-light" style="background-image: url('{% static 'vendors/images/analysis.png' %}')">
+  <div class="md:flex md:space-x-14">
+    <div class="w-full md:w-1/4">
+      <div hx-get="{% url 'home' %}" hx-push-url="{% url 'home' %}" class="group cursor-pointer flex space-x-2 items-center">
+        <img src="{% static 'vendors/images/logo.png' %}" alt="logo" class="group-hover:animate-wiggle"><span class="md:text-2xl font-black text-[#400764]">PamlicoTrade</span>
+      </div>
+      <div class="text-xl text-gray-600 py-8 text-justify">
+        <p>
+          PamlicoTrade is a trading platform for the Pamlico Valley, a region of the United States that is home to the Pamlico Islands.
+        </p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 flex-grow items-start gap-3 pb-4 ">
+      <div class="w-1/4"></div>
+      <div class="space-y-4 hidden md:block">
+        <strong class="font-black text-3xl text-variant-2">
+          Quick Links
+        </strong>
+        <ul class="list-none">
+          <li class="text-gray-600">
+            <a class="cursor-pointer" hx-push-url="{% url 'home' %}" hx-get="{% url 'home' %}" hx-target="#main">Home</a>
+          </li>
+          <li class="text-gray-600">
+            <a class="cursor-pointer" hx-push-url="{% url 'affiliate' %}" hx-get="{% url 'affiliate' %}" hx-target="#main">Affiliate</a>
+          </li>
+          <li class="text-gray-600">
+            <a class="cursor-pointer" hx-push-url="{% url 'support' %}" hx-get="{% url 'support' %}" hx-target="#main">Support</a>
+          </li>
+          {% comment %}
+          <li class="text-gray-600">
+            <a href="{% url 'faq' %}">FAQ</a>
+          </li>
+          <li class="text-gray-600">
+            <a href="{% url 'terms' %}">Terms</a>
+          </li>
+          <li class="text-gray-600">
+            <a href="{% url 'privacy' %}">Privacy</a>
+          </li>
+          {% endcomment %}
+          </ul>
+      </div>
+      <!-- <div class="space-y-4 hidden md:block">
+        <strong class="font-black text-3xl text-variant-2">
+          Documents
+        </strong>
+        <ul class="list-none">
+          <li class="text-gray-600">
+            <a href="">Certificate</a>
+          </li>
+          <li class="text-gray-600">
+            <a href="">Policy</a>
+          </li>
+        </ul>
+      </div> -->
+      <div class="space-y-4 hidden md:block">
+        <strong class="font-black text-3xl text-variant-2">
+          Contact
+        </strong>
+        <div class="space-y-3 w-full text-center ">
+          <div class="text-gray-600 flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-variant-2" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+            </svg>
+            <span class="">
+                31st Floor at 10E 53rd Street NY
+            </span>
+          </div>
+          <div class="text-gray-600 flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-variant-2" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+            </svg>
+            <span>
+              info@pamlicotrade.org
+            </span>
+          </div>
+          <div class="text-gray-600 flex items-center">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-full border-t-2 border-t-dark/40"></div>
+  <div class="w-full space-y-4 pt-8">
+    <strong class="text-1xl font-black flex items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+      </svg>
+      <span>Risk Warning</span>
+    </strong>
+    <p class="text-base font-normal text-gray-600 text-justify">
+      The financial products offered via this website include digitals, contracts for difference (CFDs), and other complex derivatives and financial products. Trading options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex financial products offered, please be sure to understand the risks involved and learn about Secure and responsible trading.
+    </p>
+  </div>
+</footer>
+<section class="w-full bg-dark text-white text-sm md:flex md:space-x-3 md:space-y-0 space-y-4 px-3 md:px-14 py-6 md:justify-between">
+  <div class="md:w-2/3 divide-x-2 flex items-center space-x-3">
+    <span hx-get="{% url 'faq' %}" hx-push-url="{% url 'faq' %}" hx-target="#main" class="cursor-pointer block pl-3">Faqs</span>
+    <span class="block pl-3">Legal Documents</span>
+    <span hx-get="{% url 'privacy' %}" hx-push-url="{% url 'privacy' %}" hx-target="#main" class="cursor-pointer block pl-3">Privacy</span>
+  </div>
+  <div class="flex-grow text-right">
+    © 2020 Pamlicotrade Company. All rights reserved.
+  </div>
+</section>
