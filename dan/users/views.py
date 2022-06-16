@@ -155,10 +155,19 @@ def withdraw(request):
     wallet = request.POST.get("wallet")
     currency = request.POST.get("currency")
     amount = request.POST.get("amount")
-    if int(amount) > 0:        # 'wallet' : addresses,
-
+    if int(amount) > 0 and Decimal(amount) <= request.user.wallet.btc and currency == "BTC":        # 'wallet' : addresses,
         wit = Withdraw.objects.create(user=request.user, wallet=str(wallet), uuid=f"WITDRAW-{dt}", currency=Currency.objects.get(name=currency), amount=amount, status=Withdraw.PENDING)
         TransactionHistory.objects.create(uuid=wit.uuid, transaction_type=TransactionHistory.WITHDRAW, user=request.user, currency=Currency.objects.get(name=currency), amount=amount, status=Withdraw.PENDING)
+        return render(request, "snippets/complete.html")
+    elif int(amount) > 0 and Decimal(amount) <= request.user.wallet.eth and currency == "ETH":        # 'wallet' : addresses,
+        wit = Withdraw.objects.create(user=request.user, wallet=str(wallet), uuid=f"WITDRAW-{dt}", currency=Currency.objects.get(name=currency), amount=amount, status=Withdraw.PENDING)
+        TransactionHistory.objects.create(uuid=wit.uuid, transaction_type=TransactionHistory.WITHDRAW, user=request.user, currency=Currency.objects.get(name=currency), amount=amount, status=Withdraw.PENDING)
+        return render(request, "snippets/complete.html")
+    elif int(amount) > 0 and Decimal(amount) <= request.user.wallet.usdt and currency == "USDT":        # 'wallet' : addresses,
+        wit = Withdraw.objects.create(user=request.user, wallet=str(wallet), uuid=f"WITDRAW-{dt}", currency=Currency.objects.get(name=currency), amount=amount, status=Withdraw.PENDING)
+        TransactionHistory.objects.create(uuid=wit.uuid, transaction_type=TransactionHistory.WITHDRAW, user=request.user, currency=Currency.objects.get(name=currency), amount=amount, status=Withdraw.PENDING)
+        return render(request, "snippets/complete.html")
+    else:        # 'wallet' : addresses,
         return render(request, "snippets/complete.html")
 
 # @require_http_methods(['GET'])
