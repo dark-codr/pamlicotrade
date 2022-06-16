@@ -97,7 +97,7 @@ INSTALLED_APPS += ["storages"]  # noqa F405
 # COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
 # STATIC_URL = f"https://{aws_s3_domain}/static/"
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 # MEDIA
 # ------------------------------------------------------------------------------
 # DEFAULT_FILE_STORAGE = "dan.utils.storages.MediaRootS3Boto3Storage"
