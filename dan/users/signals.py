@@ -29,7 +29,7 @@ def user_post_save_signal(created, instance, *args, **kwargs):
         Wallet.objects.get_or_create(user=instance)
         LOGGER.info("Sent Registration Email to admin")
 
-@receiver(post_save, sender=User)
+@receiver(pre_save, sender=User)
 def user_pre_save_signal(created, instance, *args, **kwargs):
     if instance.ref == None or instance.ref == "":
         instance.ref = instance.email.split("@")[0]+str(instance.date_joined.year)
