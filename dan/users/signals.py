@@ -28,15 +28,12 @@ def user_post_save_signal(created, instance, *args, **kwargs):
     if created:
         Wallet.objects.get_or_create(user=instance)
         LOGGER.info("Sent Registration Email to admin")
-    if instance.ref == None or instance.ref == "":
-        instance.ref = instance.email.split("@")[0]+str(instance.date_joined.year)
-        LOGGER.info(f"Referral Number Generated: {instance.ref}")
 
 @receiver(post_save, sender=User)
 def user_pre_save_signal(created, instance, *args, **kwargs):
     if instance.ref == None or instance.ref == "":
         instance.ref = instance.email.split("@")[0]+str(instance.date_joined.year)
-        LOGGER.info("Referral Number Generated")
+        LOGGER.info(f"Referral Number Generated: {instance.ref}")
 
 
 @receiver(post_save, sender=Withdraw)
