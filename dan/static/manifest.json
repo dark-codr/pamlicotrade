@@ -1,24 +1,24 @@
 {
-  "app.css": "/static/css/app.5a51103c7ef9be24e8d8.css",
-  "app.js": "/static/js/app.d794e371.js",
-  "css/app.5a51103c7ef9be24e8d8.css.map": "/static/css/app.5a51103c7ef9be24e8d8.css.map",
+  "app.css": "/static/css/app.5f8f3d01bc3289463a0c.css",
+  "app.js": "/static/js/app.9ecd8e8d.js",
+  "css/app.5f8f3d01bc3289463a0c.css.map": "/static/css/app.5f8f3d01bc3289463a0c.css.map",
   "entrypoints": {
     "app": {
       "assets": {
         "js": [
           "/static/js/runtime.30829f30.js",
           "/static/js/812.866c5f3f.js",
-          "/static/js/app.d794e371.js"
+          "/static/js/app.9ecd8e8d.js"
         ],
         "css": [
-          "/static/css/app.5a51103c7ef9be24e8d8.css"
+          "/static/css/app.5f8f3d01bc3289463a0c.css"
         ]
       }
     }
   },
   "js/812.866c5f3f.js": "/static/js/812.866c5f3f.js",
   "js/812.866c5f3f.js.map": "/static/js/812.866c5f3f.js.map",
-  "js/app.d794e371.js.map": "/static/js/app.d794e371.js.map",
+  "js/app.9ecd8e8d.js.map": "/static/js/app.9ecd8e8d.js.map",
   "js/runtime.30829f30.js.map": "/static/js/runtime.30829f30.js.map",
   "runtime.js": "/static/js/runtime.30829f30.js",
   "vendors/.gitkeep": "/static/vendors/.gitkeep",

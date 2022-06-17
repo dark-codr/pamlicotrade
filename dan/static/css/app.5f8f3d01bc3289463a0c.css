@@ -1190,9 +1190,6 @@ select {
 }.text-red-600 {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
-}.text-variant-1 {
-  --tw-text-opacity: 1;
-  color: rgb(249 206 102 / var(--tw-text-opacity));
 }.text-dark\/30 {
   color: rgb(25 29 32 / 0.3);
 }.text-variant-1\/40 {
@@ -1203,6 +1200,9 @@ select {
 }.text-red-300 {
   --tw-text-opacity: 1;
   color: rgb(252 165 165 / var(--tw-text-opacity));
+}.text-variant-1 {
+  --tw-text-opacity: 1;
+  color: rgb(249 206 102 / var(--tw-text-opacity));
 }.text-green-400 {
   --tw-text-opacity: 1;
   color: rgb(74 222 128 / var(--tw-text-opacity));
@@ -1748,4 +1748,4 @@ select {
   }
 }
 
-/*# sourceMappingURL=app.5a51103c7ef9be24e8d8.css.map*/
+/*# sourceMappingURL=app.5f8f3d01bc3289463a0c.css.map*/
