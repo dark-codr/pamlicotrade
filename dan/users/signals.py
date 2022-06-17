@@ -58,9 +58,9 @@ def withdraw_approve_signal(created, instance, *args, **kwargs):
         elif instance.currency == Currency.objects.get(name="USDT"):
             amount = instance.user.wallet.usdt - instance.amount
             Wallet.objects.filter(user=instance.user).update(usdt = amount)
-        # elif instance.currency.name == "DASH":
-        #     amount = instance.user.wallet.dash - instance.amount
-        #     Wallet.objects.filter(user=instance.user).update(dash = amount)
+        elif instance.currency.name == "DASH":
+            amount = instance.user.wallet.dash - instance.amount
+            Wallet.objects.filter(user=instance.user).update(dash = amount)
 
         body = f"""
         Hello Webmaster,

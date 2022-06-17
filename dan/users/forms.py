@@ -55,7 +55,7 @@ class UserSignupForm(SignupForm):
     Check UserSocialSignupForm for accounts created from social.
     """
     country = forms.ModelChoiceField(queryset=Country.objects.all(), label='Country', empty_label="Select Country", widget=forms.Select(attrs={'placeholder': 'Your First Name',
-                           "class": "textinput textInput form-control  relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-dark focus:outline-none focus:ring-variant-2 focus:border-variant-2 focus:z-10 sm:text-xl"}))
+                           "class": "relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-dark focus:outline-none focus:ring-variant-2 focus:border-variant-2 focus:z-10 sm:text-xl"}))
     first_name = forms.CharField(max_length=255, label='First Name', widget=forms.TextInput(attrs={'title': 'Your First Name', 'placeholder': 'Your First Name',
                            "class": "textinput textInput form-control fbc-has-badge fbc-UID_1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-dark focus:outline-none focus:ring-variant-2 focus:border-variant-2 focus:z-10 sm:text-xl"}))
     name = forms.CharField(max_length=255, label='Middle Name', widget=forms.TextInput(attrs={'title': 'Your Middle Name', 'placeholder': 'Your Middle Name',

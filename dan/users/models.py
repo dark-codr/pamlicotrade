@@ -117,6 +117,7 @@ class Wallet(TimeStampedModel):
     user = OneToOneField(User, on_delete=CASCADE, related_name=_("wallet"))
     btc = DecimalField(decimal_places=7, max_digits=20, default=0.00, blank=False)
     eth = DecimalField(decimal_places=7, max_digits=20, default=0.00, blank=False)
+    usdt = DecimalField(decimal_places=5, max_digits=20, default=0.00, blank=False)
     invested_date = DateField(blank=True, null=True)
 
     @property
@@ -128,11 +129,9 @@ class Wallet(TimeStampedModel):
         # if currency[1].name == "ETH":
         eth = self.eth #* currency[1].amount
         # if currency[2].name == "LTC":
-        # ltc = self.ltc #* currency[2].amount
-        # if currency[3].name == "DASH":
-        # dash = self.dash #* currency[3].amount
+        usdt = self.usdt #/ currency[3].amount
 
-        total = float(btc + eth)
+        total = float(btc + eth + usdt)
         return Decimal(total)
 
     def __str__(self):
@@ -155,6 +154,20 @@ class SmartsUpp(TimeStampedModel):
         managed = True
         verbose_name = "Smartsupp Upload"
         verbose_name_plural = "Smartsupp Uploads"
+        ordering = ["-created"]
+
+class Testimonials(TimeStampedModel):
+    name = CharField(max_length=250, blank=True)
+    comment = TextField(blank=False)
+    active = BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.name.title()} left a testimonial"
+
+    class Meta:
+        managed = True
+        verbose_name = "Testimonial Upload"
+        verbose_name_plural = "Testimonial Uploads"
         ordering = ["-created"]
 
 

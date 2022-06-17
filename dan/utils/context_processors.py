@@ -8,7 +8,7 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.utils.functional import SimpleLazyObject
 from django.urls import reverse
 from countries_plus.models import Country
-from dan.users.models import Addresses, Currency, SmartsUpp, Wallet
+from dan.users.models import FAQ, Addresses, Currency, SmartsUpp, Testimonials, Wallet
 
 from dan.utils.logger import LOGGER
 
@@ -42,14 +42,25 @@ def context_settings(request):
 
     btcprice = Currency.objects.get(name="BTC")
     ethprice = Currency.objects.get(name="ETH")
+    ltcprice = Currency.objects.get(name="LTC")
+    usdtprice = Currency.objects.get(name="USDT")
     usrbtc = wallet.btc if wallet != None else 0
     usreth = wallet.eth if wallet != None else 0
+    usrusdt = wallet.usdt if wallet != None else 0
+
+    faqs = FAQ.objects.all()[:10]
+    testimonials = Testimonials.objects.filter(active=True)[:12]
 
     return {
         "ACCOUNT_ALLOW_REGISTRATION": settings.ACCOUNT_ALLOW_REGISTRATION,
         # "APPLICATION_SERVER_KEY": settings.PUSH_NOTIFICATIONS_SETTINGS['APP_SERVER_KEY'],
         "DEBUG": settings.DEBUG,
         "settings": settings,
+
+        'btcprice': (usrbtc / btcprice.amount) if btcprice and usrbtc > 0.00 else 0.00,
+        'ethprice': (usreth / ethprice.amount) if ethprice and usreth > 0.00 else 0.00,
+        'ltcprice': ltcprice if ltcprice else 0.00,
+        'usdtprice': (usrusdt / usdtprice.amount) if usdtprice and usrusdt > 0.00 else 0.00,
 
         # Smartsupp
         'smartsup':active_smartsupp,

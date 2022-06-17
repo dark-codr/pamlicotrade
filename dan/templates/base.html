@@ -41,8 +41,8 @@
       <script type="application/javascript">
           tinymce.init({
             selector: 'textarea',
-            plugins: 'a11ychecker advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents tinycomments tinymcespellchecker',
-            toolbar: 'undo redo | styles | bold italic | a11ycheck addcomment showcomments casechange checklist code export formatpainter image editimage pageembed permanentpen table tableofcontents',
+            plugins: 'image autolink lists media table paste',
+            toolbar: 'undo redo | styles | bold italic | addcomment showcomments casechange checklist code export formatpainter image editimage pageembed permanentpen table tableofcontents',
             toolbar_mode: 'floating',
             tinycomments_mode: 'embedded',
           });
@@ -52,10 +52,12 @@
       <script defer src="{% static 'js/project.js' %}"></script>
 
     {% endblock javascript %}
+    {{ form.media }}
 
+    {{smartsup.script|safe}}
   </head>
 
-  <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' id="body">
+  <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' id="body" x-data="lang_drop">
       {% block nav %}
       {% include "snippets/nav.html" %}
       {% endblock nav %}
@@ -65,7 +67,7 @@
       {% endblock sidenav %}
 
 
-      <main id="main" class="w-screen mt-24 pt-1 z-0 relative">
+      <main id="main" class="w-screen {% block mt %}mt-24 pt-1{% endblock mt %} z-0 relative">
         {% block content %}
           <p>Use this document as a way to quick start any new project.</p>
         {% endblock content %}
