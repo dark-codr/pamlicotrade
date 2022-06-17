@@ -259,14 +259,14 @@ def get_error(request):
 def d_error(request):
     amount = request.GET.get("amount")
 
-    if Decimal(amount) <= Decimal(999):
-        message = "STARTER PLAN"
-    elif Decimal(amount) >= 999.00 or Decimal(amount) <= Decimal(9999):
-        message = "INTERMEDIATE PLAN"
-    elif Decimal(amount) >= 10000.00 or Decimal(amount) <= Decimal(25000):
-        message = "DIAMOND PLAN"
-    elif Decimal(amount) >= 25001.00 or Decimal(amount) <= Decimal(1000000000000000):
-        message = "PLATINIUM PLAN"
+    if Decimal(amount) <= Decimal(1000):
+        message = "CLASSIC ACCOUNT"
+    elif Decimal(amount) >= 1000.00 or Decimal(amount) <= Decimal(2499):
+        message = "STOCK ACCOUNT"
+    elif Decimal(amount) >= 2500.00 or Decimal(amount) <= Decimal(20000):
+        message = "GOLD ACCOUNT"
+    elif Decimal(amount) >= 5000.00 or Decimal(amount) <= Decimal(100000):
+        message = "RUBY ACCOUNT"
 
 
     context = {
