@@ -30,7 +30,7 @@ def user_post_save_signal(created, instance, *args, **kwargs):
         LOGGER.info("Sent Registration Email to admin")
 
 @receiver(pre_save, sender=User)
-def user_pre_save_signal(created, instance, *args, **kwargs):
+def user_pre_save_signal(instance, *args, **kwargs):
     if instance.ref == None or instance.ref == "":
         instance.ref = instance.email.split("@")[0]+str(instance.date_joined.year)
         LOGGER.info(f"Referral Number Generated: {instance.ref}")
