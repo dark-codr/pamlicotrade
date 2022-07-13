@@ -48,6 +48,8 @@
           });
       </script>
 
+      <script src="https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-clipboard@2.x.x/dist/alpine-clipboard.js" defer></script>
+
       <!-- place project specific Javascript in this file -->
       <script defer src="{% static 'js/project.js' %}"></script>
 
@@ -87,9 +89,9 @@
             </div>
             <div id="amount" class="flex items-center w-full justify-between font-black text-sm uppercase p-2 border-4 border-dark bg-gray-400 rounded-sm">
               <div class="w-5/6 flex-wrap">
-                <input id="copy" class="break-words text-base bg-gray-400 text-dark placeholder:text-dark" value="{{wallet.wallet}}">
+                <input id="addr" class="break-words text-base bg-gray-400 text-dark placeholder:text-dark" value="{{wallet.wallet}}">
               </div>
-              <svg @click="wcopy" xmlns="http://www.w3.org/2000/svg" class="cursor-pointer h-5 w-5 hover:scale-105 hover:shadow-md" viewBox="0 0 20 20" fill="currentColor">
+              <svg onclick="wcopy()" data-addr="{{wallet.wallet}}" xmlns="http://www.w3.org/2000/svg" class="cursor-pointer h-5 w-5 hover:scale-105 hover:shadow-md" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M7 9a2 2 0 012-2h6a2 2 0 012 2v6a2 2 0 01-2 2H9a2 2 0 01-2-2V9z" />
                 <path d="M5 3a2 2 0 00-2 2v6a2 2 0 002 2V5h8a2 2 0 00-2-2H5z" />
               </svg>
@@ -137,6 +139,8 @@
 
     {% block modal %}{% endblock modal %}
 
+
+
     {% javascript_pack 'app' %}
     <script src="https://unpkg.com/hyperscript.org@0.9.5"></script>
 
@@ -149,5 +153,13 @@
     </script>
     {% endcomment %}
     {% endblock inline_javascript %}
+
+    <script>
+      function wcopy() {
+        var addr = this.getAttribute('data-addr')
+        navigator.clipboard.writeText(addr);
+        alert(`Copied Address: ${addr}`);
+      }
+    </script>
   </body>
 </html>

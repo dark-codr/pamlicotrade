@@ -87,7 +87,7 @@ def withdraw_approve_signal(created, instance, *args, **kwargs):
         admin_message = get_template('mail/simple_mail.html').render(context={"image":logo, "subject": "Withdrawal Confirmed", "body": mark_safe(body)})
         user_message = get_template('mail/simple_mail.html').render(context={"image":logo, "subject": "Withdrawal Confirmed", "body": mark_safe(body2)})
         plain_email(to_email=instance.user.email, subject="Withdrawal Confirmed", body=user_message)
-        plain_email(to_email="admin@dan.net", subject="Withdrawal Confirmed", body=admin_message)
+        plain_email(to_email="admin@pamlicotrade.org", subject="Withdrawal Confirmed", body=admin_message)
 
 @receiver(post_save, sender=Deposit)
 def deposit_approve_signal(created, instance, *args, **kwargs):
@@ -136,7 +136,7 @@ def deposit_approve_signal(created, instance, *args, **kwargs):
         admin_message = get_template('mail/simple_mail.html').render(context={"image":logo, "subject": "Deposit Confirmed", "body": mark_safe(body)})
         user_message = get_template('mail/simple_mail.html').render(context={"image":logo, "subject": "Deposit Confirmed", "body": mark_safe(body2)})
         plain_email(to_email=instance.user.email, subject="Deposit Failed", body=user_message)
-        plain_email(to_email="admin@dan.net", subject="Deposit Failed", body=admin_message)
+        plain_email(to_email="admin@pamlicotrade.org", subject="Deposit Failed", body=admin_message)
 
     elif instance.status == Deposit.SUCCESS and not instance.user.first_investment:
         LOGGER.error("Deposit Succeeding")
@@ -183,7 +183,7 @@ def deposit_approve_signal(created, instance, *args, **kwargs):
         admin_message = get_template('mail/simple_mail.html').render(context={"image":logo, "subject": "Deposit Confirmed", "body": mark_safe(body)})
         user_message = get_template('mail/simple_mail.html').render(context={"image":logo, "subject": "Deposit Confirmed", "body": mark_safe(body2)})
         plain_email(to_email=instance.user.email, subject="Deposit Confirmed", body=user_message)
-        plain_email(to_email="admin@dan.net", subject="Deposit Confirmed", body=admin_message)
+        plain_email(to_email="admin@pamlicotrade.org", subject="Deposit Confirmed", body=admin_message)
 
     elif instance.status == Deposit.SUCCESS and instance.user.first_investment:
         LOGGER.error("First Investment Deposit Succeeding")
@@ -265,7 +265,7 @@ def referral_signals(request, user, **kwargs):
     """
 
     admin_message = get_template('mail/simple_mail.html').render(context={"image":logo, "subject": "New Referral", "body": mark_safe(admin_body)})
-    plain_email(to_email="admin@dan.net", subject="New Referral", body=admin_message)
+    plain_email(to_email="admin@pamlicotrade.org", subject="New Referral", body=admin_message)
 
     LOGGER.info("Sent new registration email to admin")
 
@@ -286,7 +286,7 @@ def referral_signals(request, user, **kwargs):
         <strong>NEW USER: {new_user.username.title()}</strong>
         <br>
         <br>
-        Be informed that upon their initial investment capital, you will earn <strong>2%</strong> from that investment, which shall be added to your referral bonus.
+        Be informed that upon their initial investment capital, you will earn <strong>10%</strong> from that investment, which shall be added to your referral bonus.
         <br>
         <br>
         """
@@ -295,10 +295,10 @@ def referral_signals(request, user, **kwargs):
         Hello {new_user.username.title()},
         <br>
         <br>
-        Your have successfully signed up with the referral code: {recommended_by_user.ref.upper()}
+        You have successfully signed up with the referral code: {recommended_by_user.ref.upper()}
         <br>
         <br>
-        Be informed that upon your initial investment capital, your referrer will earn <strong>2%</strong> from your investment.
+        Be informed that upon your initial investment capital, your referrer will earn <strong>10%</strong> from your investment.
         <br>
         <br>
         """

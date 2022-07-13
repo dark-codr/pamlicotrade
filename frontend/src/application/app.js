@@ -2,6 +2,8 @@
 import "../styles/index.scss";
 import htmx from 'htmx.org/dist/htmx';
 import Alpine from 'alpinejs';
+// import Clipboard from "@ryangjchandler/alpine-clipboard";
+
 import Swiper from 'swiper';
 
 // We can import other JS file as we like
@@ -16,6 +18,8 @@ window.htmx = htmx;
 window.document.addEventListener("DOMContentLoaded", function () {
   window.console.log("dom ready 1");
 });
+
+// Alpine.plugin(Clipboard);
 window.Alpine = Alpine;
 Alpine.data('lang_drop', langDropdownMenu);
 // Alpine.data('playlistToggle', playlistToggle);

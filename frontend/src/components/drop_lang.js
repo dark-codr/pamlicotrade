@@ -66,15 +66,5 @@ export default function langDropdownMenu() {
             return this.lang = true;
         },
 
-        wcopy() {
-            this.copy = !this.copy;
-            const menu = document.getElementById("copy");
-            menu.select();
-            menu.setSelectionRange(0, 99999);
-            navigator.clipboard.writeText(menu.value);
-            alert("Copied the text: " + menu.value);
-        }
-
-
     };
 }
