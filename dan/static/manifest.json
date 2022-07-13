@@ -1,39 +1,43 @@
 {
-  "app.css": "http://localhost:9091/css/app.css",
-  "app.js": "http://localhost:9091/js/app.js",
+  "app.css": "/static/css/app.22d8e5c4858d31e144ba.css",
+  "app.js": "/static/js/app.d36db68a.js",
+  "css/app.22d8e5c4858d31e144ba.css.map": "/static/css/app.22d8e5c4858d31e144ba.css.map",
   "entrypoints": {
     "app": {
       "assets": {
         "js": [
-          "http://localhost:9091/js/runtime.js",
-          "http://localhost:9091/js/vendors-node_modules_alpinejs_dist_module_esm_js-node_modules_htmx_org_dist_htmx_js-node_modu-8e5da0.js",
-          "http://localhost:9091/js/app.js"
+          "/static/js/runtime.30829f30.js",
+          "/static/js/812.866c5f3f.js",
+          "/static/js/app.d36db68a.js"
         ],
         "css": [
-          "http://localhost:9091/css/app.css"
+          "/static/css/app.22d8e5c4858d31e144ba.css"
         ]
       }
     }
   },
-  "js/vendors-node_modules_alpinejs_dist_module_esm_js-node_modules_htmx_org_dist_htmx_js-node_modu-8e5da0.js": "http://localhost:9091/js/vendors-node_modules_alpinejs_dist_module_esm_js-node_modules_htmx_org_dist_htmx_js-node_modu-8e5da0.js",
-  "runtime.js": "http://localhost:9091/js/runtime.js",
-  "vendors/.gitkeep": "http://localhost:9091/vendors/.gitkeep",
-  "vendors/images/.gitkeep": "http://localhost:9091/vendors/images/.gitkeep",
-  "vendors/images/analysis.png": "http://localhost:9091/vendors/images/analysis.png",
-  "vendors/images/colored-doodle.svg": "http://localhost:9091/vendors/images/colored-doodle.svg",
-  "vendors/images/doodle.svg": "http://localhost:9091/vendors/images/doodle.svg",
-  "vendors/images/hero.png": "http://localhost:9091/vendors/images/hero.png",
-  "vendors/images/investment-dummies.jpg": "http://localhost:9091/vendors/images/investment-dummies.jpg",
-  "vendors/images/logo.png": "http://localhost:9091/vendors/images/logo.png",
-  "vendors/images/map.svg": "http://localhost:9091/vendors/images/map.svg",
-  "vendors/images/masrafcapitalllc_net.zip": "http://localhost:9091/vendors/images/masrafcapitalllc_net.zip",
-  "vendors/images/masrafcapitalllc_net/masrafcapitalllc_net.ca-bundle": "http://localhost:9091/vendors/images/masrafcapitalllc_net/masrafcapitalllc_net.ca-bundle",
-  "vendors/images/masrafcapitalllc_net/masrafcapitalllc_net.crt": "http://localhost:9091/vendors/images/masrafcapitalllc_net/masrafcapitalllc_net.crt",
-  "vendors/images/masrafcapitalllc_net/masrafcapitalllc_net.p7b": "http://localhost:9091/vendors/images/masrafcapitalllc_net/masrafcapitalllc_net.p7b",
-  "vendors/images/sample.jpg": "http://localhost:9091/vendors/images/sample.jpg",
-  "vendors/images/wave-1.png": "http://localhost:9091/vendors/images/wave-1.png",
-  "vendors/images/wave-2.png": "http://localhost:9091/vendors/images/wave-2.png",
-  "vendors/images/wave-3.png": "http://localhost:9091/vendors/images/wave-3.png",
-  "vendors/images/wave-4.png": "http://localhost:9091/vendors/images/wave-4.png",
-  "vendors/images/webpack.png": "http://localhost:9091/vendors/images/webpack.png"
+  "js/812.866c5f3f.js": "/static/js/812.866c5f3f.js",
+  "js/812.866c5f3f.js.map": "/static/js/812.866c5f3f.js.map",
+  "js/app.d36db68a.js.map": "/static/js/app.d36db68a.js.map",
+  "js/runtime.30829f30.js.map": "/static/js/runtime.30829f30.js.map",
+  "runtime.js": "/static/js/runtime.30829f30.js",
+  "vendors/.gitkeep": "/static/vendors/.gitkeep",
+  "vendors/images/.gitkeep": "/static/vendors/images/.gitkeep",
+  "vendors/images/analysis.png": "/static/vendors/images/analysis.png",
+  "vendors/images/colored-doodle.svg": "/static/vendors/images/colored-doodle.svg",
+  "vendors/images/doodle.svg": "/static/vendors/images/doodle.svg",
+  "vendors/images/hero.png": "/static/vendors/images/hero.png",
+  "vendors/images/investment-dummies.jpg": "/static/vendors/images/investment-dummies.jpg",
+  "vendors/images/logo.png": "/static/vendors/images/logo.png",
+  "vendors/images/map.svg": "/static/vendors/images/map.svg",
+  "vendors/images/masrafcapitalllc_net.zip": "/static/vendors/images/masrafcapitalllc_net.zip",
+  "vendors/images/masrafcapitalllc_net/masrafcapitalllc_net.ca-bundle": "/static/vendors/images/masrafcapitalllc_net/masrafcapitalllc_net.ca-bundle",
+  "vendors/images/masrafcapitalllc_net/masrafcapitalllc_net.crt": "/static/vendors/images/masrafcapitalllc_net/masrafcapitalllc_net.crt",
+  "vendors/images/masrafcapitalllc_net/masrafcapitalllc_net.p7b": "/static/vendors/images/masrafcapitalllc_net/masrafcapitalllc_net.p7b",
+  "vendors/images/sample.jpg": "/static/vendors/images/sample.jpg",
+  "vendors/images/wave-1.png": "/static/vendors/images/wave-1.png",
+  "vendors/images/wave-2.png": "/static/vendors/images/wave-2.png",
+  "vendors/images/wave-3.png": "/static/vendors/images/wave-3.png",
+  "vendors/images/wave-4.png": "/static/vendors/images/wave-4.png",
+  "vendors/images/webpack.png": "/static/vendors/images/webpack.png"
 }
